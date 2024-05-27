@@ -1,19 +1,16 @@
 @import './../../styles.scss';
-
 section {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100svh;
     width: 100dvw;
     background-color: rgba(0, 0, 0, 0.116);
     @include dFlex();
     z-index: 99;
-
     .cardOuterContainer {
-        height: 100vh;
+        height: 100svh;
         @include dFlex();
-
         .card {
             width: 95dvw;
             max-width: 500px;
@@ -21,8 +18,6 @@ section {
             background-color: $white;
             @include dFlex($fd: column);
         }
-
-       
     }
     .cardCurrentUser {
         @media screen and (min-width: 600px) {
@@ -31,7 +26,6 @@ section {
             // 
             justify-content: flex-end;
             align-items: flex-start;
-
             .card {
                 position: absolute;
                 top: 100px;
@@ -39,13 +33,11 @@ section {
                 border-radius: 30px 0 30px 30px;
             }
         }
-
         @media screen and (min-width: calc($maxScreenWidth + 220px)) {
             //1560px
             @include dFlex($jc: flex-end, $ai: flex-start);
-            height: calc(100vh - 200px);
+            height: calc(100svh - 200px);
             max-width: $maxScreenWidth;
-
             .card {
                 position: static !important;
             }
@@ -59,104 +51,85 @@ section {
 .content {
     @include dFlex($fd: column);
     width: 80%;
-
     .head {
         @include dFlex($jc: space-between);
         width: 100%;
         font-size: 24px;
-
         img {
             height: 32px;
             cursor: pointer;
             transition: 0.3s;
-
             &:hover {
                 transform: scale(1.2);
                 filter: invert(23%) sepia(66%) saturate(3301%) hue-rotate(233deg) brightness(97%) contrast(96%);
             }
         }
     }
-
     .imgContainer {
         width: 100%;
         @include dFlex();
-
         img {
             @include size($w: 200px, $h: 200px);
             border-radius: 100%;
         }
     }
-
     .nameContainer {
         @include dFlex($jc: space-between);
         width: 100%;
-
         h2 {
             margin-bottom: 4px;
         }
-
         .editContainer {
             font-size: 18px;
             color: $purple3;
             cursor: pointer;
             transition: 0.3s;
-
             &:hover {
                 color: $purple1;
                 font-size: 20px;
             }
         }
     }
-
     .status {
         @include dFlex($jc: flex-start, $g: 15px);
         width: 100%;
         font-size: 20px;
-
         img {
             height: 16px;
             width: auto;
         }
     }
-
     .mailContainer {
         width: 100%;
-       // height: 70px;
+        // height: 70px;
     }
-
     .iconTxtContainer {
         @include dFlex($jc: flex-start, $g: 15px);
         margin-top: 20px;
         width: 100%;
         font-size: 20px;
-
         .mailImg {
             height: 70px;
             padding-top: 9px;
             box-sizing: border-box;
             @include dFlex($ai: flex-start);
-
             img {
                 width: 25px;
                 height: 20px;
             }
         }
     }
-
     .inputFieldContainer {
         width: 100%;
     }
-
     .mailAdressContainer {
         margin-left: 35px;
         font-size: 18px;
     }
-
     .messageBtn {
         height: 54px;
         margin: 49px 0 15px 0;
     }
-
     .btnContainer {
         @include dFlex($jc: space-between);
         width: 100%;

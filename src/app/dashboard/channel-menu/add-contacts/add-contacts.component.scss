@@ -1,101 +1,81 @@
 @import "../../../../styles.scss";
-
 .main-content {
     @include dFlex();
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     background-color: #0003;
     z-index: 999;
-
     .overlayContainer {
         @include dFlex($ai: stretch);
         background-color: $white;
         width: 90%;
         height: 55vh;
         border-radius: 40px;
-
         @media screen and (min-width: 800px) {
             max-width: 700px;
         }
-
         .overlayInnerContainer {
             @include dFlex($jc: space-around, $fd: column, $ai: stretch, $g: 24px);
             width: 90%;
             height: 100%;
-
             .headline {
                 @include dFlex($jc: space-between);
                 height: 90px;
-
                 .top {
                     font-weight: 700;
                     font-size: 28px;
                 }
-
                 .close-btn {
                     cursor: pointer;
                 }
             }
-
             .addPeopleContainer {
                 @include dFlex();
                 flex: 1;
-
                 .addPeopleContainerInnerContainer {
                     width: 90%;
                     height: 100%;
-
                     .checkbox-container {
-                        @include dFlex($g:10px, $jc:flex-start);
+                        @include dFlex($g: 10px, $jc: flex-start);
                         margin-bottom: 15px;
-
-                        input{
+                        input {
                             margin: 0;
                         }
                     }
-
                     .selectUser {
                         width: 100%;
                         @include dFlex($fd: column);
-
                         .inputField {
                             width: 100%;
                         }
-
                         .user-list {
-
                             list-style-type: none;
                             padding: 0;
                             width: 90%;
                             overflow-y: scroll;
                             height: 140px;
                             margin-bottom: 0;
-
                             li {
-                                @include dFlex($g: 10px, $jc:flex-start);
+                                @include dFlex($g: 10px, $jc: flex-start);
                                 margin-bottom: 8px;
                             }
-
                             .user-img {
                                 width: 20px;
                                 height: 20px;
                                 border-radius: 50%;
                                 object-fit: cover;
-                               
                             }
-
                             .user-label {
-                                @include dFlex($g: 10px,);
+                                @include dFlex($g: 10px, );
                                 cursor: pointer;
                             }
                         }
                     }
                 }
             }
-
             .button-area {
                 height: 70px;
                 @include dFlex($jc: flex-end, $ai: normal);

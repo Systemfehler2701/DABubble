@@ -1,33 +1,27 @@
 @import "../../../../styles.scss";
-
-
 .main-content {
     @include dFlex();
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
-
     .overlay {
         @include dFlex($jc: space-between, $fd: column);
         background-color: $white;
         z-index: 4;
         max-width: 700px;
         padding: 32px;
-        height: 100vh;
+        height: 100svh;
         width: 100%;
         box-sizing: border-box;
-
         @media screen and (min-width: 800px) {
-
             background-color: $white;
             z-index: 2;
             height: 540px;
             border-radius: 30px 0px 30px 30px;
-
             padding-top: 16px;
             padding-bottom: 16px;
             width: 400px;
@@ -36,21 +30,16 @@
             right: 60px;
         }
     }
-
 }
-
-
 
 .headline {
     @include dFlex($jc: space-between);
     width: 100%;
     margin-bottom: 8px;
-
     .top {
         font-weight: 700;
         font-size: 24px;
     }
-
     .title {
         color: $purple2;
         font-size: 18px;
@@ -58,11 +47,9 @@
     }
 }
 
-
 .content {
     flex: 1;
     @include dFlex($fd: column, $jc: space-between);
-
     .listContainer {
         margin: 8px 0;
         height: 130px;
@@ -74,8 +61,6 @@
         box-sizing: border-box;
         flex: 1;
         width: 100%;
-        
-
         .listContainerInner {
             height: 100%;
             overflow-y: auto;
@@ -83,34 +68,28 @@
             margin-block-end: 0;
             list-style: none;
             padding-inline-start: 5px;
-
             .liInfoTxt {
                 font-size: 12px;
                 font-weight: 400;
                 color: $text_grey;
             }
-
             img {
                 width: 20px;
                 height: 20px;
             }
-
             .user-img {
                 border-radius: 100%;
                 object-fit: cover;
                 margin-right: 10px;
             }
-
             .selectedListElement {
                 @include dFlex($g: 8px, $jc: space-between);
                 padding-bottom: 5px;
                 padding-right: 5px;
-
                 .selectedListElementInner {
                     @include dFlex($g: 8px);
                 }
             }
-
             .unselectedListElement {
                 cursor: pointer;
                 padding-bottom: 5px;
@@ -119,8 +98,6 @@
         }
     }
 }
-
-
 
 .close-btn {
     cursor: pointer;

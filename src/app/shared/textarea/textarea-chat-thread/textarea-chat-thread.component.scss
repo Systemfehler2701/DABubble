@@ -1,5 +1,4 @@
 @import './../../../../styles.scss';
-
 .inputfield {
     position: relative;
     width: 90%;
@@ -8,122 +7,101 @@
     border: 1px solid $light_purple;
     border-radius: 20px;
     @include dFlex($fd: column, $ai: normal);
-  
-  
     textarea {
-      background-color: none;
-      border: 0;
-      padding-left: 16px;
-      padding-top: 18px;
-      font-size: 18px;
-      flex: 1;
-      border-radius: 20px;
-      resize: none;
-  
-      &:focus-visible {
-        outline: 0;
-      }
-
-     
-
-    }
-  
-    .listContainer{
-      position: absolute;
-      overflow: hidden;
-      top: -50px;
-      left: 50px;
-      height: 100px;
-      background-color: $white;
-      box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.6);
-      border-radius: 20px;
-      z-index: 2;
-      margin-top: 16px;
-      .list{
-        overflow-y: auto;
-        height: 100%;
-        font-size: 16px;
-        font-weight: 400;
-        padding-top: 12px;
-        box-sizing: border-box;
-        .singleName{
-          padding: 2px 12px;
-          cursor: pointer;
-          &:hover{
-            color: $purple3;
-          }
+        background-color: none;
+        border: 0;
+        padding-left: 16px;
+        padding-top: 18px;
+        font-size: 18px;
+        flex: 1;
+        border-radius: 20px;
+        resize: none;
+        &:focus-visible {
+            outline: 0;
         }
-      }
     }
-  
-    .controllElementsContainer {
-      position: relative;
-      width: 100%;
-      @include dFlex($jc: space-between);
-      padding: 18px 16px;
-      box-sizing: border-box;
-  
-      .showContactsTextInput {
+    .listContainer {
         position: absolute;
-        z-index: 1000;
-        top: -280px;
-  
-      }
-  
-  
-      img {
-        height: 20px;
-        width: 20px;
-        cursor: pointer;
-      }
-  
-      .moreControls {
-        @include dFlex($g: 8px);
-  
-        .inputFieldVerticalLine {
-          height: 35px;
-          width: 0;
-          border: 0.5px solid $light_purple;
+        overflow: hidden;
+        top: -50px;
+        left: 50px;
+        height: 100px;
+        background-color: $white;
+        box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        z-index: 2;
+        margin-top: 16px;
+        .list {
+            overflow-y: auto;
+            height: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            padding-top: 12px;
+            box-sizing: border-box;
+            .singleName {
+                padding: 2px 12px;
+                cursor: pointer;
+                &:hover {
+                    color: $purple3;
+                }
+            }
         }
-  
-      }
     }
-    
-  }
-  .errorPopupOuterContainer {
-        width: 100vw;
-        height: 100vh;
+    .controllElementsContainer {
+        position: relative;
+        width: 100%;
+        @include dFlex($jc: space-between);
+        padding: 18px 16px;
+        box-sizing: border-box;
+        .showContactsTextInput {
+            position: absolute;
+            z-index: 1000;
+            top: -280px;
+        }
+        img {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+        .moreControls {
+            @include dFlex($g: 8px);
+            .inputFieldVerticalLine {
+                height: 35px;
+                width: 0;
+                border: 0.5px solid $light_purple;
+            }
+        }
+    }
+}
+
+.errorPopupOuterContainer {
+    width: 100vw;
+    height: 100svh;
+    @include dFlex();
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .errorPopup {
+        width: 240px;
+        height: auto;
         @include dFlex();
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-      
-        .errorPopup {
-          width: 240px;
-          height: auto;
-          @include dFlex();
-          background-color: $white;
-          box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.6);
-          border-radius: 20px;
-      
-          .errorPopupInnerContainer {
+        background-color: $white;
+        box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        .errorPopupInnerContainer {
             margin: 16px;
             height: 100%;
             @include dFlex($fd: column, $jc: space-around, $g: 16px);
             text-align: center;
-      
             .errorPopupTxtContainer {
-              @include dFlex($fd: column, $g: 8px);
+                @include dFlex($fd: column, $g: 8px);
             }
-      
             .okBtn {
-              width: 60px;
-              border: 1px solid;
-              border-radius: 20px;
+                width: 60px;
+                border: 1px solid;
+                border-radius: 20px;
             }
-      
-          }
         }
-      
-      }
+    }
+}

@@ -11,11 +11,11 @@ main {
         border-radius: 0px;
         width: 100dvw;
         max-height: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100svh - 70px);
     }
     @media screen and (min-width: 800px) {
         max-height: none;
-        height: calc(100vh - 180px);
+        height: calc(100svh - 180px);
         width: auto;
     }
 }

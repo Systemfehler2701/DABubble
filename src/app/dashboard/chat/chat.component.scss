@@ -3,7 +3,7 @@ main {
     @include dFlex($fd: column);
     width: 100%;
     max-height: none;
-    height: calc(100vh - 180px);
+    height: calc(100svh - 180px);
     border-radius: 30px;
     background-color: $white;
     padding-bottom: 16px;
@@ -11,7 +11,7 @@ main {
     @media (max-width: 600px) {
         border-radius: 0px;
         max-height: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100svh - 70px);
     }
     .contentContainer {
         @include dFlex($fd: column, $ai: flex-end, $jc: space-between);

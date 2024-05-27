@@ -37,14 +37,14 @@ section {
     bottom: 0;
     left: 0;
     width: 100dvw;
-    height: calc(100vh + 200px);
+    height: calc(100svh + 200px);
     background-color: rgba(0, 0, 0, 0.116);
     position: absolute;
     animation: moveIn 0.3s;
     z-index: 99;
     @media screen and (min-width: 600px) {
         top: 0;
-        height: 100vh;
+        height: 100svh;
         animation: fadeIn 500ms;
     }
     .outerContainer {
@@ -53,7 +53,7 @@ section {
         @media screen and (min-width: calc($maxScreenWidth + 220px)) {
             //calc($maxScreenWidth + 220px) 2140px
             @include dFlex($jc: flex-end, $ai: flex-start);
-            height: calc(100vh - 100px);
+            height: calc(100svh - 100px);
             .innerContainer {
                 position: static !important;
             }

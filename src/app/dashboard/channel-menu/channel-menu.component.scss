@@ -12,7 +12,7 @@ app-searchbar {
     overflow: hidden;
     height: 100%;
     max-height: none;
-    height: calc(100vh - 180px);
+    height: calc(100svh - 180px);
     padding: 16px 30px 32px 30px;
     border-radius: 30px;
     background-color: white;
@@ -24,7 +24,7 @@ app-searchbar {
         max-width: unset;
         border-radius: 0px;
         max-height: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100svh - 70px);
     }
     @media screen and (min-width: 800px) {
         max-width: 366px;
